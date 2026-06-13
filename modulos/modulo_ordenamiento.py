@@ -1,1 +1,51 @@
+# ---------------- FUNCIONES DE ORDENAMIENTO ----------------
 
+def obtener_nombre(pais):
+    return pais["nombre"].lower()
+
+
+def obtener_poblacion(pais):
+    return pais["poblacion"]
+
+
+def obtener_superficie(pais):
+    return pais["superficie"]
+
+
+def ordenar_paises(paises):
+    """
+    Ordena los países por nombre, población o superficie.
+    Permite elegir orden ascendente o descendente.
+    """
+    print("\n---------- ORDENAR PAÍSES ----------")
+    print("1. Ordenar por nombre")
+    print("2. Ordenar por población")
+    print("3. Ordenar por superficie")
+
+    opcion = input("Seleccione una opción: ")
+
+    print("\nTipo de orden:")
+    print("1. Ascendente")
+    print("2. Descendente")
+
+    tipo_orden = input("Seleccione una opción: ")
+
+    descendente = False
+
+    if tipo_orden == "2":
+        descendente = True
+    elif tipo_orden != "1":
+        print("Opción de orden inválida.")
+        return
+
+    if opcion == "1":
+        paises_ordenados = sorted(paises, key=obtener_nombre, reverse=descendente)
+    elif opcion == "2":
+        paises_ordenados = sorted(paises, key=obtener_poblacion, reverse=descendente)
+    elif opcion == "3":
+        paises_ordenados = sorted(paises, key=obtener_superficie, reverse=descendente)
+    else:
+        print("Opción inválida.")
+        return
+
+    mostrar_paises(paises_ordenados)
