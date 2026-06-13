@@ -9,18 +9,18 @@ from operaciones import (
     filtrar_por_superficie,
     ordenar_paises
 )
-from estadisticas import mostrar_estadisticas
+from estadistica import mostrar_estadisticas
 
 
-ARCHIVO_CSV = "paises.csv"
+archivo_csv = "paises.csv"
 
 
 def main():
-    paises = cargar_paises_csv(ARCHIVO_CSV)
+    paises = cargar_paises_csv(archivo_csv)
 
     opcion = ""
 
-    while opcion != "10":
+    while opcion != "0":
         mostrar_menu()
         opcion = input("Ingrese una opción: ")
 
@@ -28,10 +28,10 @@ def main():
             mostrar_paises(paises)
 
         elif opcion == "2":
-            agregar_pais(paises, ARCHIVO_CSV)
+            agregar_pais(paises, archivo_csv)
 
         elif opcion == "3":
-            actualizar_pais(paises, ARCHIVO_CSV)
+            actualizar_pais(paises, archivo_csv)
 
         elif opcion == "4":
             buscar_pais_por_nombre(paises)
@@ -51,7 +51,7 @@ def main():
         elif opcion == "9":
             mostrar_estadisticas(paises)
 
-        elif opcion == "10":
+        elif opcion == "0":
             print("Saliendo del programa...")
 
         else:

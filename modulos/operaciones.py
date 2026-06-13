@@ -1,10 +1,16 @@
 # ---------------- FUNCIONES PRINCIPALES DEL SISTEMA ----------------
 
-def agregar_pais(paises):
-    """
-    Agrega un nuevo país a la lista.
-    No permite campos vacíos ni países repetidos por nombre exacto.
-    """
+
+from datos import guardar_paises_csv
+from validacion import pedir_texto_no_vacio, pedir_entero_positivo, pedir_rango, pedir_continente
+from visualizacion import mostrar_pais, mostrar_paises
+
+#Funciones para agregar un país, actualizar datos de un país, buscar por nombre, y filtrar por continente, población o superficie.
+
+
+#Función agregar país, que pide los datos del nuevo país, valida que no exista otro con el mismo nombre, y lo agrega a la lista de países.
+def agregar_pais(paises, archivo_csv):
+
     print("\n---------- AGREGAR PAÍS ----------")
 
     nombre = pedir_texto_no_vacio("Ingrese el nombre del país: ")
@@ -26,15 +32,15 @@ def agregar_pais(paises):
     }
 
     paises.append(nuevo_pais)
-    guardar_paises_csv(ARCHIVO_CSV, paises)
+    guardar_paises_csv(archivo_csv, paises)
 
     print("País agregado correctamente.")
 
 
-def actualizar_pais(paises):
-    """
-    Actualiza población y superficie de un país buscado por nombre exacto.
-    """
+#Funcion actualizar país, que busca un país por nombre exacto, y permite actualizar su población y superficie. 
+#Si el país no existe, muestra un mensaje de error.
+def actualizar_pais(paises, archivo_csv):
+
     print("\n---------- ACTUALIZAR PAÍS ----------")
 
     nombre = pedir_texto_no_vacio("Ingrese el nombre exacto del país a actualizar: ")
@@ -50,7 +56,7 @@ def actualizar_pais(paises):
             pais["poblacion"] = nueva_poblacion
             pais["superficie"] = nueva_superficie
 
-            guardar_paises_csv(ARCHIVO_CSV, paises)
+            guardar_paises_csv(archivo_csv, paises)
 
             print("Datos actualizados correctamente.")
             return
@@ -58,10 +64,9 @@ def actualizar_pais(paises):
     print("No se encontró un país con ese nombre.")
 
 
+#Función buscar país por nombre, que permite buscar países por coincidencia parcial o exacta en el nombre, y muestra los resultados encontrados.
 def buscar_pais_por_nombre(paises):
-    """
-    Busca países por coincidencia parcial o exacta en el nombre.
-    """
+
     print("\n---------- BUSCAR PAÍS ----------")
 
     busqueda = pedir_texto_no_vacio("Ingrese el nombre o parte del nombre del país: ")
@@ -79,10 +84,9 @@ def buscar_pais_por_nombre(paises):
         mostrar_paises(resultados)
 
 
+#Función filtrar por continente, que permite filtrar países por continente seleccionado, y muestra los resultados encontrados.
 def filtrar_por_continente(paises):
-    """
-    Filtra países por continente.
-    """
+
     print("\n---------- FILTRAR POR CONTINENTE ----------")
 
     continente = pedir_continente("Ingrese el continente: ")
@@ -99,10 +103,9 @@ def filtrar_por_continente(paises):
         mostrar_paises(resultados)
 
 
+#Función filtrar por población, que permite filtrar países por un rango de población ingresado por el usuario, y muestra los resultados encontrados.
 def filtrar_por_poblacion(paises):
-    """
-    Filtra países según un rango de población.
-    """
+
     print("\n---------- FILTRAR POR RANGO DE POBLACIÓN ----------")
 
     minimo, maximo = pedir_rango(
@@ -122,10 +125,9 @@ def filtrar_por_poblacion(paises):
         mostrar_paises(resultados)
 
 
+#Función filtrar por superficie, que permite filtrar países por un rango de superficie ingresado por el usuario, y muestra los resultados encontrados.
 def filtrar_por_superficie(paises):
-    """
-    Filtra países según un rango de superficie.
-    """
+
     print("\n---------- FILTRAR POR RANGO DE SUPERFICIE ----------")
 
     minimo, maximo = pedir_rango(

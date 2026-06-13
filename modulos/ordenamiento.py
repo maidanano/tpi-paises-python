@@ -1,22 +1,26 @@
 # ---------------- FUNCIONES DE ORDENAMIENTO ----------------
 
+from visualizacion import mostrar_paises
+
+
+#Función que obtiene el nombre de un país, en minúsculas, para usar como clave de ordenamiento.
 def obtener_nombre(pais):
     return pais["nombre"].lower()
 
 
+#Función que obtiene la población de un país, para usar como clave de ordenamiento.
 def obtener_poblacion(pais):
     return pais["poblacion"]
 
 
+#Función que obtiene la superficie de un país, para usar como clave de ordenamiento.
 def obtener_superficie(pais):
     return pais["superficie"]
 
 
+#Función que ordena los países por nombre, población o superficie, según la elección del usuario, y muestra los resultados ordenados.
 def ordenar_paises(paises):
-    """
-    Ordena los países por nombre, población o superficie.
-    Permite elegir orden ascendente o descendente.
-    """
+
     print("\n---------- ORDENAR PAÍSES ----------")
     print("1. Ordenar por nombre")
     print("2. Ordenar por población")
