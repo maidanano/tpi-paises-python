@@ -65,7 +65,7 @@ def buscar_pais_por_nombre(paises):
     print("\n---------- BUSCAR PAÍS ----------")
 
     busqueda = pedir_texto_no_vacio("Ingrese el nombre o parte del nombre del país: ")
- 
+
     resultados = []
 
     for pais in paises:

@@ -1,5 +1,11 @@
 # ---------------- FUNCIONES DE ESTADÍSTICAS ----------------
 
+#Funciones para mostrar estadísticas generales del dataset, como el país con mayor población, menor población, promedio de población y superficie, y cantidad de países por continente.
+
+
+from .visualizacion import mostrar_pais
+
+#Función que muestra el país con mayor población
 def mostrar_pais_mayor_poblacion(paises):
     mayor = paises[0]
 
@@ -11,6 +17,7 @@ def mostrar_pais_mayor_poblacion(paises):
     mostrar_pais(mayor)
 
 
+#Función que muestra el país con menor población
 def mostrar_pais_menor_poblacion(paises):
     menor = paises[0]
 
@@ -22,6 +29,7 @@ def mostrar_pais_menor_poblacion(paises):
     mostrar_pais(menor)
 
 
+#Función que calcula el promedio de población de paises en el dataset
 def calcular_promedio_poblacion(paises):
     suma = 0
 
@@ -31,6 +39,7 @@ def calcular_promedio_poblacion(paises):
     return suma / len(paises)
 
 
+#Función que calcula el promedio de superficie de paises en el dataset y devuelve el resultado.
 def calcular_promedio_superficie(paises):
     suma = 0
 
@@ -40,6 +49,7 @@ def calcular_promedio_superficie(paises):
     return suma / len(paises)
 
 
+#Función que cuenta cuántos países hay por continente y devuelve un diccionario con continente como clave y cantidad como valor.
 def contar_paises_por_continente(paises):
     """
     Cuenta cuántos países hay por continente.
@@ -58,10 +68,10 @@ def contar_paises_por_continente(paises):
     return conteo
 
 
+#Función que muestra todas las estadísticas calculadas. Recibe la lista de países como parámetro.
+#Muestra el país con mayor población, menor población, promedio de población y superficie, y cantidad de países por continente.
 def mostrar_estadisticas(paises):
-    """
-    Muestra estadísticas generales del dataset.
-    """
+    
     print("\n---------- ESTADÍSTICAS ----------")
 
     if len(paises) == 0:

@@ -1,9 +1,11 @@
 # ---------------- FUNCIONES DE VISUALIZACIÓN ----------------
 
+#Funciones para mostrar el menú, un país o una lista de países.
+
 def mostrar_menu():
-    """
-    Muestra el menú principal del sistema.
-    """
+
+    #Muestra el menú principal del sistema.
+
     print("\n---------- MENÚ PRINCIPAL ----------")
     print("1. Mostrar todos los países")
     print("2. Agregar un país")
