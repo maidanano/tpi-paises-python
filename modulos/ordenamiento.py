@@ -1,6 +1,6 @@
 # ---------------- FUNCIONES DE ORDENAMIENTO ----------------
 
-from visualizacion import mostrar_paises
+from modulos.visualizacion import mostrar_paises
 
 
 #Función que obtiene el nombre de un país, en minúsculas, para usar como clave de ordenamiento.

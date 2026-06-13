@@ -1,9 +1,9 @@
 # ---------------- FUNCIONES PRINCIPALES DEL SISTEMA ----------------
 
 
-from datos import guardar_paises_csv
-from validacion import pedir_texto_no_vacio, pedir_entero_positivo, pedir_rango, pedir_continente
-from visualizacion import mostrar_pais, mostrar_paises
+from modulos.datos import guardar_paises_csv
+from modulos.validacion import pedir_texto_no_vacio, pedir_entero_positivo, pedir_rango, pedir_continente
+from modulos.visualizacion import mostrar_pais, mostrar_paises
 
 #Funciones para agregar un país, actualizar datos de un país, buscar por nombre, y filtrar por continente, población o superficie.
 

@@ -1,20 +1,20 @@
 from modulos.datos import cargar_paises_csv
-from visualizacion import mostrar_menu, mostrar_paises
-from operaciones import (
+from modulos.visualizacion import mostrar_menu, mostrar_paises
+from modulos.operaciones import (
     agregar_pais,
     actualizar_pais,
     buscar_pais_por_nombre,
     filtrar_por_continente,
     filtrar_por_poblacion,
     filtrar_por_superficie,
-    ordenar_paises
-)
-from estadistica import mostrar_estadisticas
+    )
+from modulos.estadistica import mostrar_estadisticas
+from modulos.ordenamiento import ordenar_paises
 
 
 archivo_csv = "paises.csv"
 
-
+#Función principal del programa, que carga los datos, muestra el menú y ejecuta las opciones seleccionadas por el usuario hasta que decida salir.
 def main():
     paises = cargar_paises_csv(archivo_csv)
 

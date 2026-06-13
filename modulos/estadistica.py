@@ -3,7 +3,7 @@
 #Funciones para mostrar estadísticas generales del dataset, como el país con mayor población, menor población, promedio de población y superficie, y cantidad de países por continente.
 
 
-from .visualizacion import mostrar_pais
+from modulos.visualizacion import mostrar_pais
 
 #Función que muestra el país con mayor población
 def mostrar_pais_mayor_poblacion(paises):
