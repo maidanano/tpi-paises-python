@@ -1,5 +1,5 @@
 # ---------------- FUNCIONES DE ARCHIVO CSV ----------------
-
+import csv
 #Función cargar países
 def cargar_paises_csv(nombre_archivo):
     
@@ -21,14 +21,18 @@ def cargar_paises_csv(nombre_archivo):
 
                     if nombre != "" and continente != "" and poblacion > 0 and superficie > 0:
                         pais = {
-                            "nombre": nombre,
+                            "nombre": nombre.title(),
                             "poblacion": poblacion,
                             "superficie": superficie,
-                            "continente": continente
+                            "continente": continente.title()
                         }
+
                         paises.append(pais)
+
+
                     else:
                         print("Se encontró una fila con datos vacíos o inválidos. No fue cargada.")
+
 
                 except ValueError:
                     print("Error de formato en una fila del CSV. No fue cargada.")
@@ -45,6 +49,8 @@ def cargar_paises_csv(nombre_archivo):
 
 #Función guardar paises
 def guardar_paises_csv(nombre_archivo, paises):
+    #Guarda la lista de países en un archivo CSV.
+
     try:
         with open(nombre_archivo, "w", encoding="utf-8") as archivo:
             archivo.write("nombre,poblacion,superficie,continente\n")
