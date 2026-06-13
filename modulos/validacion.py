@@ -1,6 +1,6 @@
 # ---------------- FUNCIONES DE VALIDACIÓN ----------------
 
-CONTINENTES_VALIDOS = ["América", "Europa", "Asia", "África", "Oceanía"]
+CONTINENTES_VALIDOS = ["America", "Europa", "Asia", "Africa", "Oceania"]
 
 
 #Función que pide texto no vacío
@@ -65,5 +65,21 @@ def pedir_continente(mensaje):
                 return continente
         print(f"Error: continente inválido. Ingrese uno de la lista")
 
+
+#Funcion que pide el nombre de un país, validando que no esté vacío ni contenga solo números,
+# y devuelve el nombre con la primera letra en mayúscula.
+def pedir_nombre_pais(mensaje):
+
+    nombre = input(mensaje).strip()
+
+    while nombre == "" or nombre.isdigit():
+        if nombre == "":
+            print("Error: el nombre del país no puede estar vacío.")
+        else:
+            print("Error: el nombre del país no puede ser solo números.")
+
+        nombre = input(mensaje).strip()
+
+    return nombre.title()
 
 

@@ -2,7 +2,7 @@
 
 
 from modulos.datos import guardar_paises_csv
-from modulos.validacion import pedir_texto_no_vacio, pedir_entero_positivo, pedir_rango, pedir_continente
+from modulos.validacion import pedir_nombre_pais, pedir_texto_no_vacio, pedir_entero_positivo, pedir_rango, pedir_continente
 from modulos.visualizacion import mostrar_pais, mostrar_paises
 
 #Funciones para agregar un país, actualizar datos de un país, buscar por nombre, y filtrar por continente, población o superficie.
@@ -13,7 +13,7 @@ def agregar_pais(paises, archivo_csv):
 
     print("\n---------- AGREGAR PAÍS ----------")
 
-    nombre = pedir_texto_no_vacio("Ingrese el nombre del país: ")
+    nombre = pedir_nombre_pais("Ingrese el nombre del país: ")
 
     for pais in paises:
         if pais["nombre"].lower() == nombre.lower():

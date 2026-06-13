@@ -28,17 +28,21 @@ def ordenar_paises(paises):
 
     opcion = input("Seleccione una opción: ")
 
+    if opcion != "1" and opcion != "2" and opcion != "3":
+            print("Opción inválida.")
+            return
+
     print("\nTipo de orden:")
     print("1. Ascendente")
     print("2. Descendente")
 
     tipo_orden = input("Seleccione una opción: ")
 
-    descendente = False
-
-    if tipo_orden == "2":
+    if tipo_orden == "1":
+        descendente = False
+    elif tipo_orden == "2":
         descendente = True
-    elif tipo_orden != "1":
+    else:
         print("Opción de orden inválida.")
         return
 
@@ -46,10 +50,7 @@ def ordenar_paises(paises):
         paises_ordenados = sorted(paises, key=obtener_nombre, reverse=descendente)
     elif opcion == "2":
         paises_ordenados = sorted(paises, key=obtener_poblacion, reverse=descendente)
-    elif opcion == "3":
-        paises_ordenados = sorted(paises, key=obtener_superficie, reverse=descendente)
     else:
-        print("Opción inválida.")
-        return
+        paises_ordenados = sorted(paises, key=obtener_superficie, reverse=descendente)
 
     mostrar_paises(paises_ordenados)
