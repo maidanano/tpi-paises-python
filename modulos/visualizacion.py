@@ -2,9 +2,9 @@
 
 #Funciones para mostrar el menú, un país o una lista de países.
 
-def mostrar_menu():
 
-    #Muestra el menú principal del sistema.
+#Función que muestra el menú principal del sistema.
+def mostrar_menu():
 
     print("\n---------- MENÚ PRINCIPAL ----------")
     print("1. Mostrar todos los países")
@@ -19,9 +19,9 @@ def mostrar_menu():
     print("0. Salir")
 
 
+#Muestra los datos de un país.
 def mostrar_pais(pais):
-    
-    #Muestra los datos de un país.
+
     
     print(f"Nombre: {pais['nombre']}")
     print(f"Población: {pais['poblacion']}")
@@ -30,9 +30,9 @@ def mostrar_pais(pais):
     print("-----------------------------------")
 
 
+#Muestra una lista de países.
 def mostrar_paises(paises):
-    
-    #Muestra una lista de países.
+
     
     if len(paises) == 0:
         print("No hay países para mostrar.")
