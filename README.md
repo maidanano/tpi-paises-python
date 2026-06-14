@@ -80,6 +80,7 @@ tpi-paises-python/
 ├── main.py       # Código fuente completo
 ├── paises.csv    # Dataset base de países
 └── README.md     # Este archivo
+└── modulos       # Módulo de funciones
 ```
 
 ---
@@ -112,7 +113,10 @@ Error: el campo no puede estar vacío.
 Ingrese el nombre del país:
 ```
 
+> Si se escribe el país solo con letras, el sistema lo vuelve a pedir:
 ---
+Error: el nombre del país no puede ser solo números.
+
 
 ### Buscar por nombre (coincidencia parcial)
 
@@ -151,6 +155,12 @@ No se encontraron países con ese criterio de búsqueda.
 Ingrese una opción: 5
 
 ---------- FILTRAR POR CONTINENTE ----------
+Continentes disponibles:
+America
+Europa
+Asia
+Africa
+Oceania
 Ingrese el continente: Oceanía
 
 ---------- LISTADO DE PAÍSES ----------
