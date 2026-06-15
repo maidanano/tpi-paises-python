@@ -298,7 +298,6 @@ Datos actualizados correctamente.
 ## 👥 Integrantes del equipo
 
 **| Nombre completo | Legajo | Comisión | Módulos desarrollados |**
-|----------------|--------|----------------------|
 
 | Mariano Ezequiel Maidana | [Legajo 1] |  Comisión M26 C1-08  | Agregar/actualizar países, validaciones, ordenamientos |
 
