@@ -307,7 +307,7 @@ Datos actualizados correctamente.
 
 ## 🎥 Video demostrativo
 
-[Insertar link al video aquí]
+https://youtu.be/1SiKjbChhOs
 
 > El video muestra el funcionamiento completo del sistema en consola, la estructura del código y la explicación de las decisiones técnicas tomadas.
 
