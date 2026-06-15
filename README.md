@@ -299,7 +299,7 @@ Datos actualizados correctamente.
 
 **| Nombre completo | Legajo | Comisión | Módulos desarrollados |**
 
-| Mariano Ezequiel Maidana | [Legajo 1] |  Comisión M26 C1-08  | Agregar/actualizar países, validaciones, ordenamientos |
+| Mariano Ezequiel Maidana | 	Matrícula 103187 |  Comisión M26 C1-08  | Agregar/actualizar países, validaciones, ordenamientos |
 
 | Mariano Gallo | Matrícula 103050 |  Comisión M26 C1-10 | Carga CSV, modularización, filtros, estadísticas |
 
@@ -307,7 +307,7 @@ Datos actualizados correctamente.
 
 ## 🎥 Video demostrativo
 
-[Insertar link al video aquí]
+https://youtu.be/1SiKjbChhOs
 
 > El video muestra el funcionamiento completo del sistema en consola, la estructura del código y la explicación de las decisiones técnicas tomadas.
 
