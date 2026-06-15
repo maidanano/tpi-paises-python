@@ -3,7 +3,7 @@
 > Trabajo Práctico Integrador (TPI) — Programación 1  
 > Tecnicatura Universitaria en Programación a Distancia (TUPAD)  
 > Universidad Tecnológica Nacional — UTN  
-> 2° Cuatrimestre 2025
+> 2° Cuatrimestre 2026
 
 ---
 
