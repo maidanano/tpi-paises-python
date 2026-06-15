@@ -1,3 +1,4 @@
+import os
 from modulos.datos import cargar_paises_csv
 from modulos.visualizacion import mostrar_menu, mostrar_paises
 from modulos.operaciones import (
@@ -12,7 +13,7 @@ from modulos.estadistica import mostrar_estadisticas
 from modulos.ordenamiento import ordenar_paises
 
 
-archivo_csv = "paises.csv"
+archivo_csv = os.path.join(os.path.dirname(__file__), "paises.csv")     #Así busca el CSV en la misma carpeta que main.py, sin importar desde dónde se ejecute
 
 #Función principal del programa, que carga los datos, muestra el menú y ejecuta las opciones seleccionadas por el usuario hasta que decida salir.
 def main():
