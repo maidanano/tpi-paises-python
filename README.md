@@ -81,6 +81,7 @@ tpi-paises-python/
 ├── paises.csv    # Dataset base de países
 └── README.md     # Este archivo
 └── modulos       # Módulo de funciones
+└── capturas      # Capturas del código de Python
 ```
 
 ---
@@ -296,10 +297,10 @@ Datos actualizados correctamente.
 
 ## 👥 Integrantes del equipo
 
-| Nombre completo | Legajo | Módulos desarrollados |
+**| Nombre completo | Legajo | Comisión | Módulos desarrollados |**
 |----------------|--------|----------------------|
-| [Nombre Integrante 1] | [Legajo 1] | Agregar/actualizar países, validaciones, ordenamientos |
-| Mariano Gallo | Matrícula 103050 | Carga CSV, modularización, filtros, estadísticas |
+| Mariano Ezequiel Maidana | [Legajo 1] |  Comisión M26 C1-08  | Agregar/actualizar países, validaciones, ordenamientos |
+| Mariano Gallo | Matrícula 103050 |  Comisión M26 C1-10 | Carga CSV, modularización, filtros, estadísticas |
 
 ---
 
