@@ -313,12 +313,6 @@ Datos actualizados correctamente.
 
 ---
 
-## 📄 Documentación
-
-[Insertar link al informe PDF aquí]
-
----
-
 ## 📚 Bibliografía utilizada
 
 - Downey, A. (2015). *Think Python* — https://greenteapress.com/wp/think-python-2e/
